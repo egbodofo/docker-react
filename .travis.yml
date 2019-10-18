@@ -5,7 +5,5 @@ services:
 before_install:
   - docker build -t egbodofo/docker-react -f Dockerfile.dev .
 
-  install: travis_wait 30 mvn install
-
 script:
   - docker run egbodofo/docker-react npm run test -- --coverage
